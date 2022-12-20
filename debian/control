@@ -1,0 +1,49 @@
+Source: libqxp
+Priority: optional
+Maintainer: Deepin Developer <deepin-dev@deepin.org>
+Uploaders: Deepin Packages Builder <packages@deepin.org>
+Build-Depends: debhelper (>= 10), librevenge-dev, libboost-dev, libicu-dev, pkg-config, libcppunit-dev
+Build-Depends-Indep: doxygen
+Standards-Version: 3.9.8
+Section: libs
+Homepage: https://wiki.documentfoundation.org/DLP/Libraries/libqxp
+#Vcs-Git
+#Vcs-Browser
+
+Package: libqxp-dev
+Section: libdevel
+Architecture: any
+Depends: libqxp-0.0-0 (= ${binary:Version}), ${misc:Depends}
+Description: library for reading and converting QuarkXPress files -- development
+ libqxp is a library and a set of tools for reading and converting
+ QuarkXPress file format. It supports versions 3.1-4.1 currently.
+ .
+ This package contains the needef files (headers, ..) for developing 
+ applications using libqxp.
+
+Package: libqxp-0.0-0
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: library for reading and converting QuarkXPress files
+ libqxp is a library and a set of tools for reading and converting
+ QuarkXPress file format. It supports versions 3.1-4.1 currently.
+
+Package: libqxp-tools
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: library for reading and converting QuarkXPress files -- tools
+ libqxp is a library and a set of tools for reading and converting
+ QuarkXPress file format. It supports versions 3.1-4.1 currently.
+ .
+ This package contains the qxp2raw, qxp2svg and qxp2text tools.
+
+Package: libqxp-doc
+Architecture: all
+Section: doc
+Depends: ${misc:Depends}
+Description: library for reading and converting QuarkXPress files -- documentation
+ libqxp is a library and a set of tools for reading and converting
+ QuarkXPress file format. It supports versions 3.1-4.1 currently.
+ .
+ This package contains the documentation for libqxp
+
